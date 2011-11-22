@@ -1,0 +1,12 @@
+D:\ii\eto\restauracja\Restauracja\GUI\Bin\Debug\GUI.dll
+D:\ii\eto\restauracja\Restauracja\GUI\Bin\Debug\GUI.pdb
+D:\ii\eto\restauracja\Restauracja\GUI\Bin\Debug\AppManifest.xaml
+D:\ii\eto\restauracja\Restauracja\GUI\Bin\Debug\GUI.xap
+D:\ii\eto\restauracja\Restauracja\GUI\Bin\Debug\GUITestPage.html
+D:\ii\eto\restauracja\Restauracja\GUI\obj\Debug\ResolveAssemblyReference.cache
+D:\ii\eto\restauracja\Restauracja\GUI\obj\Debug\App.g.i.cs
+D:\ii\eto\restauracja\Restauracja\GUI\obj\Debug\MainPage.g.i.cs
+D:\ii\eto\restauracja\Restauracja\GUI\obj\Debug\GUI.g.resources
+D:\ii\eto\restauracja\Restauracja\GUI\obj\Debug\GUI.dll
+D:\ii\eto\restauracja\Restauracja\GUI\obj\Debug\GUI.pdb
+D:\ii\eto\restauracja\Restauracja\GUI\obj\Debug\XapCacheFile.xml
