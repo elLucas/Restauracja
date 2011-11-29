@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>34a7693d-807a-4b8a-86a1-6e2778e5c6c2</ProjectGuid>
+    <ProjectGuid>{18D13DEC-C039-4C00-A086-086C1DB43597}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Restauracja.ServerDTO</RootNamespace>
