@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b6c17795-a522-47c6-a48f-c35293467d93" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1814/WebService/RestaurantService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RestaurantService.wsdl" MetadataType="Wsdl" ID="2697bd49-84e9-4379-a6e7-cb9c3da810ce" SourceId="1" SourceUrl="http://localhost:1814/WebService/RestaurantService.svc?wsdl" />
+    <MetadataFile FileName="RestaurantService.xsd" MetadataType="Schema" ID="a2a4e1a8-f9f5-47e0-84e4-f84355cb8f56" SourceId="1" SourceUrl="http://localhost:1814/WebService/RestaurantService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RestaurantService.disco" MetadataType="Disco" ID="229a64a2-8b38-4300-bb33-ef9921ce0623" SourceId="1" SourceUrl="http://localhost:1814/WebService/RestaurantService.svc?disco" />
+    <MetadataFile FileName="RestaurantService1.xsd" MetadataType="Schema" ID="eb0da180-7247-4aa9-b79d-2bf61da5039c" SourceId="1" SourceUrl="http://localhost:1814/WebService/RestaurantService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Restauracja.ServerDTO")]
+[assembly: AssemblyTitle("Restauracja.ClientDTO")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Restauracja.ServerDTO")]
+[assembly: AssemblyProduct("Restauracja.ClientDTO")]
 [assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("50cc9541-7a62-4801-b66f-d2c1a19e4abb")]
+[assembly: Guid("b359b7c0-0c1c-4de5-bfd5-5c80106fb882")]
 
 // Version information for an assembly consists of the following four values:
 //

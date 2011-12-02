@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5B486759-3A04-49A4-8A92-A242E3B21171}</ProjectGuid>
+    <ProjectGuid>{81D0E3B8-FD11-4236-84DC-45D26B997683}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Restauracja.ServerDTO</RootNamespace>
-    <AssemblyName>Restauracja.ServerDTO</AssemblyName>
+    <RootNamespace>Restauracja.ClientDTO</RootNamespace>
+    <AssemblyName>Restauracja.ClientDTO</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
