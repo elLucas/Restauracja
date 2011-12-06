@@ -78,6 +78,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Misc\ServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\RestaurantService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -128,6 +129,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Data Access\" />
     <Folder Include="Model\" />
     <Folder Include="ViewModel\" />
     <Folder Include="View\" />

@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Restauracja.RestaurantService;
 using System.Windows.Browser;
+using Restauracja.Misc;
 
 namespace Restauracja
 {
@@ -23,8 +24,7 @@ namespace Restauracja
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            RestaurantServiceClient client = new RestaurantServiceClient();
-            client.Endpoint.Address = new System.ServiceModel.EndpointAddress(String.Format("http://localhost:{0}/WebService/RestaurantService.svc", HtmlPage.Document.DocumentUri.Port));
+            RestaurantServiceClient client = ServiceFactory.CreateClient();
             client.GetAppNameCompleted += new EventHandler<GetAppNameCompletedEventArgs>(client_GetAppNameCompleted);
             client.GetAppNameAsync();
         }
