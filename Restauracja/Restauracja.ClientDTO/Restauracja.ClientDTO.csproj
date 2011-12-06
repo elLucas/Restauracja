@@ -40,6 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Restauracja.ServerDTO\BaseDTO.cs">
+      <Link>BaseDTO.cs</Link>
+    </Compile>
+    <Compile Include="..\Restauracja.ServerDTO\DtoModel.cs">
+      <Link>DtoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Restauracja.ServerDTO\TableDTO.cs">
+      <Link>TableDTO.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
