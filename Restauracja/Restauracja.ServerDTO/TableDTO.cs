@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Restauracja.ServerDTO
 {
-    class TableDTO
+    public class TableDTO
     {
     }
 }
