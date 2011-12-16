@@ -45,6 +45,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableDTO.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Restauracja.BusinessLayer\Restauracja.BusinessLayer.csproj">
+      <Project>{D5E9D6E9-0544-4205-993D-682A272B8995}</Project>
+      <Name>Restauracja.BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

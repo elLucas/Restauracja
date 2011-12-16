@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="restaurant" Class="RestaurantDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=restaurant;Integrated Security=True" SettingsObjectName="Restauracja.BusinessLayer.Properties.Settings" SettingsPropertyName="restaurantConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[Order]" Member="Orders">
+    <Type Name="Order">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_wiatres" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_table" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_products" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Order" Member="Product" ThisKey="id_products" OtherKey="id" Type="Product" IsForeignKey="true" />
+      <Association Name="Table_Order" Member="Table" ThisKey="id_table" OtherKey="id" Type="Table" IsForeignKey="true" />
+      <Association Name="Worker_Order" Member="Worker" ThisKey="id_wiatres" OtherKey="id" Type="Worker" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Order" Member="Orders" ThisKey="id" OtherKey="id_products" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Table]" Member="Tables">
+    <Type Name="Table">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="number" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Table_Order" Member="Orders" ThisKey="id" OtherKey="id_table" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Worker" Member="Workers">
+    <Type Name="Worker">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="surname" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="number" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="Worker_Order" Member="Orders" ThisKey="id" OtherKey="id_wiatres" Type="Order" />
+    </Type>
+  </Table>
+</Database>
