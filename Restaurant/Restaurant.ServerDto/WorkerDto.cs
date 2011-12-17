@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Surname { get; set; }
         public short? Number { get; set; }
-        public byte Pin { get; set; }
+        public short Pin { get; set; }
 
 #if SILVERLIGHT
 #else

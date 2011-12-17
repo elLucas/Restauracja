@@ -74,7 +74,12 @@
     </Compile>
     <Compile Include="Services\SilverlightFaultBehavior.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Restaurant.ServerDto\Restaurant.ServerDto.csproj">
+      <Project>{F2FE966E-A86D-4E73-B0F8-9C2A11FE7599}</Project>
+      <Name>Restaurant.ServerDto</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

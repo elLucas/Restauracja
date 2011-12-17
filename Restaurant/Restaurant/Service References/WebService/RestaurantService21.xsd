@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Restaurant.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Restaurant.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="WorkerDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:short" />
+          <xs:element minOccurs="0" name="Pin" type="xs:short" />
+          <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkerDto" nillable="true" type="tns:WorkerDto" />
+  <xs:complexType name="BaseDto">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtendedProperties" nillable="true" type="q1:ArrayOfKeyValueOfstringanyType" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="tns:DtoModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseDto" nillable="true" type="tns:BaseDto" />
+  <xs:complexType name="DtoModel">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Orders" nillable="true" type="q2:ArrayOfKeyValueOfintOrderDtot07YQQjL" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Tables" nillable="true" type="q3:ArrayOfKeyValueOfintTableDtot07YQQjL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DtoModel" nillable="true" type="tns:DtoModel" />
+  <xs:complexType name="OrderDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Closed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTable" type="xs:int" />
+          <xs:element minOccurs="0" name="IdWaiter" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderDto" nillable="true" type="tns:OrderDto" />
+  <xs:complexType name="TableDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Number" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TableDto" nillable="true" type="tns:TableDto" />
+</xs:schema>

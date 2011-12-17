@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Restaurant.DTO" />
   <xs:element name="DoWork">
     <xs:complexType>
       <xs:sequence />
@@ -19,6 +20,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="AppNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pinNumber" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Restaurant.DTO" minOccurs="0" name="LoginResult" nillable="true" type="q1:WorkerDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

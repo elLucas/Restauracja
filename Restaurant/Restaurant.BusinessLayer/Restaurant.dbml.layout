@@ -47,16 +47,16 @@
         <classShapeMoniker Id="8d65f0a6-9398-4bce-bf3b-f95e8ff483fc" />
       </nodes>
     </associationConnector>
-    <classShape Id="5f955967-0893-455f-9dd2-53c160e2d6f2" absoluteBounds="3.75, 2.875, 2, 1.7708968098958331">
+    <classShape Id="901d0062-2e05-4b04-a27f-e5667303e6e1" absoluteBounds="5.75, 3, 2, 1.7708968098958331">
       <DataClassMoniker Name="/RestaurantDataContext/Worker" />
       <nestedChildShapes>
-        <elementListCompartment Id="537fbaac-4875-420d-b435-0d0d8586a203" absoluteBounds="3.765, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4f880104-90fc-4e3a-aa21-646755eee117" absoluteBounds="5.765, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.78125 : 2.875); (3.78125 : 2.35984537760417); (2.875 : 2.35984537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.84375 : 3); (6.84375 : 2.35984537760417); (2.875 : 2.35984537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/RestaurantDataContext/Worker/Worker_Order" />
       <nodes>
-        <classShapeMoniker Id="5f955967-0893-455f-9dd2-53c160e2d6f2" />
+        <classShapeMoniker Id="901d0062-2e05-4b04-a27f-e5667303e6e1" />
         <classShapeMoniker Id="b55960f1-145b-45eb-987f-798010c383e1" />
       </nodes>
     </associationConnector>

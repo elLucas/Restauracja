@@ -4,6 +4,8 @@
     <xsd:schema targetNamespace="/Imports">
       <xsd:import schemaLocation="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd0" />
       <xsd:import schemaLocation="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Restaurant.DTO" />
+      <xsd:import schemaLocation="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="RestaurantService_DoWork_InputMessage">
@@ -18,6 +20,12 @@
   <wsdl:message name="RestaurantService_AppName_OutputMessage">
     <wsdl:part name="parameters" element="AppNameResponse" />
   </wsdl:message>
+  <wsdl:message name="RestaurantService_Login_InputMessage">
+    <wsdl:part name="parameters" element="Login" />
+  </wsdl:message>
+  <wsdl:message name="RestaurantService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="LoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="RestaurantService">
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="urn:RestaurantService/DoWork" message="RestaurantService_DoWork_InputMessage" />
@@ -26,6 +34,10 @@
     <wsdl:operation name="AppName">
       <wsdl:input wsaw:Action="urn:RestaurantService/AppName" message="RestaurantService_AppName_InputMessage" />
       <wsdl:output wsaw:Action="urn:RestaurantService/AppNameResponse" message="RestaurantService_AppName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="urn:RestaurantService/Login" message="RestaurantService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="urn:RestaurantService/LoginResponse" message="RestaurantService_Login_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

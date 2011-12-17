@@ -936,7 +936,7 @@ namespace Restaurant.BusinessLayer
 		
 		private System.Nullable<short> _Number;
 		
-		private byte _Pin;
+		private short _Pin;
 		
 		private EntitySet<Order> _Orders;
 		
@@ -952,7 +952,7 @@ namespace Restaurant.BusinessLayer
     partial void OnSurnameChanged();
     partial void OnNumberChanging(System.Nullable<short> value);
     partial void OnNumberChanged();
-    partial void OnPinChanging(byte value);
+    partial void OnPinChanging(short value);
     partial void OnPinChanged();
     #endregion
 		
@@ -1042,8 +1042,8 @@ namespace Restaurant.BusinessLayer
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pin", DbType="TinyInt NOT NULL")]
-		public byte Pin
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pin", DbType="SmallInt NOT NULL")]
+		public short Pin
 		{
 			get
 			{

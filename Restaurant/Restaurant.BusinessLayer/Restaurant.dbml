@@ -46,7 +46,7 @@
       <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Surname" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
       <Column Name="Number" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="Pin" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Pin" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
       <Association Name="Worker_Order" Member="Orders" ThisKey="Id" OtherKey="Id_waiter" Type="Order" />
     </Type>
   </Table>

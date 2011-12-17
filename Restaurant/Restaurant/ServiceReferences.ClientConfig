@@ -1,17 +1,17 @@
 ﻿<configuration>
     <system.serviceModel>
         <bindings>
-            <customBinding>
-                <binding name="CustomBinding_RestaurantService">
-                    <binaryMessageEncoding />
-                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_RestaurantService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
                 </binding>
-            </customBinding>
+            </basicHttpBinding>
         </bindings>
         <client>
             <endpoint address="http://localhost:5023/Services/RestaurantService.svc"
-                binding="customBinding" bindingConfiguration="CustomBinding_RestaurantService"
-                contract="WebService.RestaurantService" name="CustomBinding_RestaurantService" />
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_RestaurantService"
+                contract="WebService.RestaurantService" name="BasicHttpBinding_RestaurantService" />
         </client>
     </system.serviceModel>
 </configuration>

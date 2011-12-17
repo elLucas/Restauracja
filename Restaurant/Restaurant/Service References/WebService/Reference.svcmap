@@ -24,10 +24,12 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="RestaurantService.xsd" MetadataType="Schema" ID="219c001f-8bb6-4f73-bdd9-4ed3e4d259e9" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd0" />
-    <MetadataFile FileName="RestaurantService.disco" MetadataType="Disco" ID="b15c58f9-3da0-48be-a71f-ef49df4a759a" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?disco" />
+    <MetadataFile FileName="RestaurantService1.wsdl" MetadataType="Wsdl" ID="8c787239-9b51-4690-8196-72f7a36f0301" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?wsdl=wsdl0" />
     <MetadataFile FileName="RestaurantService1.xsd" MetadataType="Schema" ID="a1e8133c-fcd4-43a1-aa75-554cb3abb71c" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd1" />
     <MetadataFile FileName="RestaurantService.wsdl" MetadataType="Wsdl" ID="5b4cf580-7bfc-457f-a191-2f5959b82895" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?wsdl" />
-    <MetadataFile FileName="RestaurantService1.wsdl" MetadataType="Wsdl" ID="8c787239-9b51-4690-8196-72f7a36f0301" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RestaurantService2.xsd" MetadataType="Schema" ID="f96dc33a-7783-48c6-8197-a11587e6297d" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RestaurantService21.xsd" MetadataType="Schema" ID="ea46b9e6-1dc5-42b8-9939-acefa9332599" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RestaurantService.disco" MetadataType="Disco" ID="b15c58f9-3da0-48be-a71f-ef49df4a759a" SourceId="1" SourceUrl="http://localhost:5023/Services/RestaurantService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

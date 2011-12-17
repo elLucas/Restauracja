@@ -3,6 +3,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
+using Restaurant.DTO;
 
 namespace Restaurant.Web.Services
 {
@@ -22,6 +23,18 @@ namespace Restaurant.Web.Services
         public string AppName()
         {
             return "Restauracja";
+        }
+
+        [OperationContract]
+        public WorkerDto Login(short pinNumber)
+        {
+            return new WorkerDto()
+                       {
+                           Id = pinNumber,
+                           Name = "Imie " + pinNumber,
+                           Surname = "Nazwisko" + pinNumber,
+                           Number = pinNumber
+                       };
         }
 
         // Add more operations here and mark them with [OperationContract]
