@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="restaurant" Class="RestaurantDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=restaurant;Integrated Security=True" SettingsObjectName="Restaurant.BusinessLayer.Properties.Settings" SettingsPropertyName="restaurantConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Association Name="Product_ProductOrder" Member="ProductOrders" ThisKey="Id" OtherKey="Id_product" Type="ProductOrder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Table]" Member="Tables">
+    <Type Name="Table">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Table_Order" Member="Orders" ThisKey="Id" OtherKey="Id_table" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Worker" Member="Workers">
+    <Type Name="Worker">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="Worker_Order" Member="Orders" ThisKey="Id" OtherKey="Id_waiter" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Orders">
+    <Type Name="Order">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_waiter" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_table" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Order_ProductOrder" Member="ProductOrders" ThisKey="Id" OtherKey="Id_product" Type="ProductOrder" />
+      <Association Name="Worker_Order" Member="Worker" ThisKey="Id_waiter" OtherKey="Id" Type="Worker" IsForeignKey="true" />
+      <Association Name="Table_Order" Member="Table" ThisKey="Id_table" OtherKey="Id" Type="Table" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductOrder" Member="ProductOrders">
+    <Type Name="ProductOrder">
+      <Column Name="Id_product" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_order" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="SmallMoney NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="Order_ProductOrder" Member="Order" ThisKey="Id_product" OtherKey="Id" Type="Order" IsForeignKey="true" />
+      <Association Name="Product_ProductOrder" Member="Product" ThisKey="Id_product" OtherKey="Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
