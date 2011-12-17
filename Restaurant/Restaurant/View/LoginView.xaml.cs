@@ -14,7 +14,7 @@ namespace Restaurant.View
         private void number_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             if (_pinPressed.Length < 3)
-                // zalozenie ze w przycisku jest liczba
+                // zalozenie ze w przycisku jest liczba 
                 _pinPressed += ((Button) sender).Content;
             else
             {
@@ -29,6 +29,8 @@ namespace Restaurant.View
         {
             EnableAllButtons(true);
             _pinPressed = "";
+            var mainView = new MainView(e.Result);
+            Content = mainView;
         }
 
         private void EnableAllButtons(bool enable)
