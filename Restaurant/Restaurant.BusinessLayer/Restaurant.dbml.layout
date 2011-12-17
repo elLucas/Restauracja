@@ -14,25 +14,12 @@
         <elementListCompartment Id="cf49b9b8-07ea-4007-9b22-1ebad069df18" absoluteBounds="3.89, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9d9dc43c-33d0-43ff-985d-e3cdb4f59bd7" absoluteBounds="4.125, 2.625, 2, 1.5785953776041666">
-      <DataClassMoniker Name="/RestaurantDataContext/Worker" />
-      <nestedChildShapes>
-        <elementListCompartment Id="68f1b836-293d-4c6b-86d9-46b277fe8ba5" absoluteBounds="4.14, 3.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="b55960f1-145b-45eb-987f-798010c383e1" absoluteBounds="0.875, 0.875, 2, 1.7708968098958331">
       <DataClassMoniker Name="/RestaurantDataContext/Order" />
       <nestedChildShapes>
         <elementListCompartment Id="003f5c4c-6d4c-451c-8eca-d27368b1b91a" absoluteBounds="0.89, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.03125 : 2.625); (6.03125 : 2.34939647265625); (2.875 : 2.34939647265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/RestaurantDataContext/Worker/Worker_Order" />
-      <nodes>
-        <classShapeMoniker Id="9d9dc43c-33d0-43ff-985d-e3cdb4f59bd7" />
-        <classShapeMoniker Id="b55960f1-145b-45eb-987f-798010c383e1" />
-      </nodes>
-    </associationConnector>
     <associationConnector edgePoints="[(3.875 : 1.44314697265625); (2.875 : 1.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/RestaurantDataContext/Table/Table_Order" />
       <nodes>
@@ -53,11 +40,24 @@
         <classShapeMoniker Id="8d65f0a6-9398-4bce-bf3b-f95e8ff483fc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.5 : 5.54974659375); (1.46875 : 5.54974659375); (1.46875 : 5.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 5.54974659375); (1.46875 : 5.54974659375); (1.46875 : 5.0881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/RestaurantDataContext/Product/Product_ProductOrder" />
       <nodes>
         <classShapeMoniker Id="77e83516-d80f-401f-999b-5b68ecc1a2ef" />
         <classShapeMoniker Id="8d65f0a6-9398-4bce-bf3b-f95e8ff483fc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5f955967-0893-455f-9dd2-53c160e2d6f2" absoluteBounds="3.75, 2.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RestaurantDataContext/Worker" />
+      <nestedChildShapes>
+        <elementListCompartment Id="537fbaac-4875-420d-b435-0d0d8586a203" absoluteBounds="3.765, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.78125 : 2.875); (3.78125 : 2.35984537760417); (2.875 : 2.35984537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RestaurantDataContext/Worker/Worker_Order" />
+      <nodes>
+        <classShapeMoniker Id="5f955967-0893-455f-9dd2-53c160e2d6f2" />
+        <classShapeMoniker Id="b55960f1-145b-45eb-987f-798010c383e1" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

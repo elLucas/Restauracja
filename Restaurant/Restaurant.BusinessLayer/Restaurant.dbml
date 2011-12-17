@@ -16,15 +16,6 @@
       <Association Name="Table_Order" Member="Orders" ThisKey="Id" OtherKey="Id_table" Type="Order" />
     </Type>
   </Table>
-  <Table Name="dbo.Worker" Member="Workers">
-    <Type Name="Worker">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Surname" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="Number" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Association Name="Worker_Order" Member="Orders" ThisKey="Id" OtherKey="Id_waiter" Type="Order" />
-    </Type>
-  </Table>
   <Table Name="dbo.[Order]" Member="Orders">
     <Type Name="Order">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -33,8 +24,8 @@
       <Column Name="Comment" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
       <Column Name="Closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="Order_ProductOrder" Member="ProductOrders" ThisKey="Id" OtherKey="Id_product" Type="ProductOrder" />
-      <Association Name="Worker_Order" Member="Worker" ThisKey="Id_waiter" OtherKey="Id" Type="Worker" IsForeignKey="true" />
       <Association Name="Table_Order" Member="Table" ThisKey="Id_table" OtherKey="Id" Type="Table" IsForeignKey="true" />
+      <Association Name="Worker_Order" Member="Worker" ThisKey="Id_waiter" OtherKey="Id" Type="Worker" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ProductOrder" Member="ProductOrders">
@@ -47,6 +38,16 @@
       <Column Name="Comment" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Association Name="Order_ProductOrder" Member="Order" ThisKey="Id_product" OtherKey="Id" Type="Order" IsForeignKey="true" />
       <Association Name="Product_ProductOrder" Member="Product" ThisKey="Id_product" OtherKey="Id" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Worker" Member="Workers">
+    <Type Name="Worker">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Pin" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="Worker_Order" Member="Orders" ThisKey="Id" OtherKey="Id_waiter" Type="Order" />
     </Type>
   </Table>
 </Database>
