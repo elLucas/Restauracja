@@ -1,7 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using Restaurant.Misc;
-using Restaurant.WebService;
+﻿using System.Windows.Controls;
 
 namespace Restaurant
 {

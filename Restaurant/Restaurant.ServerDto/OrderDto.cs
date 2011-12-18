@@ -12,7 +12,7 @@
 #else
         public static OrderDto ToDo(BusinessLayer.Order order)
         {
-            return new OrderDto()
+            return new OrderDto
                        {
                            Id = order.Id,
                            IdWaiter = order.Id_waiter,
@@ -24,7 +24,7 @@
 
         public static BusinessLayer.Order FromDto(OrderDto orderDto)
         {
-            return new BusinessLayer.Order()
+            return new BusinessLayer.Order
                        {
                            Id = orderDto.Id,
                            Id_waiter = orderDto.IdWaiter,

@@ -4,7 +4,7 @@ namespace Restaurant.View
 {
     public partial class MainView : UserControl
     {
-        private readonly WebService.WorkerDto _workerDto;
+        private readonly DTO.WorkerDto _workerDto;
 
         public string UserName
         {
@@ -18,10 +18,9 @@ namespace Restaurant.View
             }
         }
 
-        public MainView(WebService.WorkerDto workerDto)
+        public MainView(DTO.WorkerDto workerDto)
         {
             InitializeComponent();
-            // TODO: Complete member initialization
             _workerDto = workerDto;
             nameLabel.Content = UserName;
         }

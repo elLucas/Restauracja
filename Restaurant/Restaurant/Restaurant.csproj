@@ -80,11 +80,12 @@
     </Compile>
     <Compile Include="Misc\ServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\WebService\Reference.cs">
+    <Compile Include="Service References\DTO\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\Abstract\ViewModelBase.cs" />
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
@@ -112,22 +113,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AppManifest.xml" />
-    <None Include="Service References\WebService\Restaurant.WebService.WorkerDto.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\WebService\RestaurantService.wsdl" />
-    <None Include="Service References\WebService\RestaurantService.xsd">
+    <None Include="Properties\DataSources\Restaurant.DTO.WorkerDto.datasource" />
+    <None Include="Service References\DTO\RestaurantService.wsdl" />
+    <None Include="Service References\DTO\RestaurantService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WebService\RestaurantService1.wsdl" />
-    <None Include="Service References\WebService\RestaurantService1.xsd">
+    <None Include="Service References\DTO\RestaurantService1.wsdl" />
+    <None Include="Service References\DTO\RestaurantService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <Content Include="ServiceReferences.ClientConfig" />
-    <None Include="Service References\WebService\RestaurantService2.xsd">
+    <None Include="Service References\DTO\RestaurantService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\WebService\RestaurantService21.xsd">
+    <None Include="Service References\DTO\RestaurantService21.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -135,26 +134,24 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\WebService\" />
+    <WCFMetadataStorage Include="Service References\DTO\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WebService\RestaurantService.disco" />
+    <None Include="Service References\DTO\RestaurantService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WebService\configuration91.svcinfo" />
+    <None Include="Service References\DTO\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WebService\configuration.svcinfo" />
+    <None Include="Service References\DTO\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\WebService\Reference.svcmap">
+    <None Include="Service References\DTO\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Restaurant.ClientDto\Restaurant.ClientDto.csproj">
       <Project>{67998C4F-2B35-41C4-9807-9A92A60B8350}</Project>

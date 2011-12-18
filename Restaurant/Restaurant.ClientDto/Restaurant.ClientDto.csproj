@@ -64,6 +64,9 @@
     <Compile Include="..\Restaurant.ServerDto\OrderDto.cs">
       <Link>OrderDto.cs</Link>
     </Compile>
+    <Compile Include="..\Restaurant.ServerDto\ProductDto.cs">
+      <Link>ProductDto.cs</Link>
+    </Compile>
     <Compile Include="..\Restaurant.ServerDto\ReceiptDto.cs">
       <Link>ReceiptDto.cs</Link>
     </Compile>

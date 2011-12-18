@@ -19,13 +19,13 @@ namespace Restaurant.View
             else
             {
                 EnableAllButtons(false);
-                WebService.RestaurantServiceClient client = Misc.ServiceFactory.CreateClient();
+                DTO.RestaurantServiceClient client = Misc.ServiceFactory.CreateClient();
                 client.LoginCompleted += client_LoginCompleted;
                 client.LoginAsync(short.Parse(_pinPressed));
             }
         }
 
-        void client_LoginCompleted(object sender, WebService.LoginCompletedEventArgs e)
+        void client_LoginCompleted(object sender, DTO.LoginCompletedEventArgs e)
         {
             EnableAllButtons(true);
             _pinPressed = "";

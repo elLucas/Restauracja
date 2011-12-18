@@ -13,7 +13,7 @@
 #else
         public static ReceiptDto ToDto(BusinessLayer.ProductOrder rec)
         {
-            return new ReceiptDto()
+            return new ReceiptDto
                        {
                            IdProduct = rec.Id_product,
                            IdOrder = rec.Id_order,
@@ -26,7 +26,7 @@
 
         public static BusinessLayer.ProductOrder FromDto(ReceiptDto receipt)
         {
-            return new BusinessLayer.ProductOrder()
+            return new BusinessLayer.ProductOrder
                        {
                            Id_order = receipt.IdOrder,
                            Id_product = receipt.IdProduct,

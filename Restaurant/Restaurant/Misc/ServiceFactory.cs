@@ -2,7 +2,7 @@
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Windows;
-using Restaurant.WebService;
+using Restaurant.DTO;
 
 namespace Restaurant.Misc
 {
