@@ -1,0 +1,8 @@
+*.exe
+*.dll
+*.suo
+*.ReSharper.*
+obj
+bin
+ClientBin
+_ReSharper.*
