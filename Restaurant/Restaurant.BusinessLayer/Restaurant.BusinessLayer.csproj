@@ -47,6 +47,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Restaurant.cs">
+      <DependentUpon>Restaurant.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Restaurant.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

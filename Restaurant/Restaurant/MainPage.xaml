@@ -3,7 +3,5 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignHeight="480"
              d:DesignWidth="640" xmlns:my="clr-namespace:Restaurant.View">
 
-  <Grid x:Name="LayoutRoot" Background="White">
-        <my:LoginView HorizontalAlignment="Left" x:Name="loginView1" VerticalAlignment="Top" Margin="173,86,0,0" />
-    </Grid>
+  <Grid x:Name="LayoutRoot" Background="White"></Grid>
 </UserControl>
